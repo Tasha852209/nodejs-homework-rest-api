@@ -76,6 +76,7 @@ const logout = async (req, res) => {
 const updateAvatar = async (req, res) => {
   const { _id } = req.user;
   const { path: tempUpload, originalname } = req.file;
+  // console.log(req.file);
 
   const filename = `${_id}_${originalname}`;
   const resultUpload = path.join(avatarsDir, filename);
