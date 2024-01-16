@@ -23,14 +23,19 @@ const sendEmail = async (data) => {
 
 module.exports = sendEmail;
 
-// const email = {
-//   to: "tashakhuda@gmail.com",
-//   from: "freedom89@meta.ua",
-//   subject: "Test email",
-//   html: "<p>Test email<p>",
+// with SendGrid
+
+// const sgMail = require("@sendgrid/mail");
+// require("dotenv").config();
+
+// const { SENDGRID_API_KEY } = process.env;
+
+// sgMail.setApiKey(SENDGRID_API_KEY);
+
+// const sendEmail = async (data) => {
+//   const email = { ...data, from: "bogdan.lyamzin.d@gmail.com" };
+//   await sgMail.send(email);
+//   return true;
 // };
 
-// transport
-//   .sendMail(email)
-//   .then(() => console.log("Email send success"))
-//   .catch((error) => console.log(error.message));
+// module.exports = sendEmail;
